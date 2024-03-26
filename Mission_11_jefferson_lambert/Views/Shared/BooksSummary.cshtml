@@ -1,0 +1,41 @@
+﻿@model ProjectListViewModel
+
+<!--This is a generated table ! teehee .. -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center">Books Details</h1>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>ISBN</th>
+                        <th>Classification</th>
+                        <th>Category</th>
+                        <th>Page Count</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var book in Model.Books)
+                    {
+                        <tr>
+                            <td>@book.BookID</td>
+                            <td>@book.Title</td>
+                            <td>@book.Author</td>
+                            <td>@book.Publisher</td>
+                            <td>@book.ISBN</td>
+                            <td>@book.Classification</td>
+                            <td>@book.Category</td>
+                            <td>@book.PageCount</td>
+                            <td>@book.Price</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
